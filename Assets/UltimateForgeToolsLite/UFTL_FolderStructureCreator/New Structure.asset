@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6258f43bfce18f044a3098c5a8e93d1f, type: 3}
   m_Name: New Structure
   m_EditorClassIdentifier: 
-  folders: []
+  folders:
+  - Animations/Character
+  - Arte 3D/Character
+  - Arte 3D/Enemy/Police
+  - "Arte 3D/Enemy/\xD1eros"
+  - Arte 2D/UI
+  - Arte 2D/BacgroundHistory
+  - Arte 2D/Sprite
+  - Scripts/Player
+  - Scripts/UI
+  - Scripts/Platforms
+  - Scripts/Resilience Rounter
+  - Scripts/Enemy
+  - 'Audio/Bacground '
+  - Audio/SFX
