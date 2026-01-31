@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
+    public Sprite muteOff, muteOn;
+
     private void Awake()
     {
         if (Instance == null)

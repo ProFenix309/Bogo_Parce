@@ -14,7 +14,7 @@ public class ControladorSalto : MonoBehaviour
     }
     public void Saltar()
     {
-        
+        Debug.Log("Salto");
         if (estaEnPiso)
         {           
             PlayerController.instance.rb.AddForce(0, fuerzaSalto, 0);
