@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour
 {
     [SerializeField] GameObject pause;
+    [SerializeField] GameObject gameOver;
 
     public void StarButtonUI()
     {
@@ -31,10 +32,12 @@ public class UI_Manager : MonoBehaviour
     public void ResectButton()
     {
         SceneManager.LoadScene("InGame");
+        Time.timeScale = 1f;
     }
 
-    public void Test()
+    public void GameOverPanel(bool pausa)
     {
-        Debug.Log("Hit");
+        gameOver.SetActive(pausa);
+        Time.timeScale = 0f;
     }
 }

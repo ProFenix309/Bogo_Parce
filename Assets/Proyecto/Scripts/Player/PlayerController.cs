@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     public Rigidbody rb;
+    public UI_Manager ui;
 
     private void Awake()
     {
@@ -24,9 +25,11 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (ui == null) 
+            return;
         if (collision.gameObject.tag == "FinDelJuego")
         {
-            SceneManager.LoadScene("Mein Menu");           
+            ui.GameOverPanel(true);
         }
     }
 
