@@ -249,6 +249,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &483969548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483969549}
+  m_Layer: 0
+  m_Name: SpownerPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483969549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483969548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 628878099}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &494204059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,11 +485,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
---- !u!1 &494204060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8577170396536611301, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
-  m_PrefabInstance: {fileID: 494204059}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &623790918
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   spawnerPlataformas: {fileID: 0}
+  conPunRes: {fileID: 0}
 --- !u!65 &623790921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -715,7 +742,8 @@ Transform:
   m_LocalPosition: {x: 21.69, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 483969549}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &680960270
@@ -774,10 +802,6 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 4880536106010669327}
-    - target: {fileID: 7061327856884919249, guid: 5a3a9f7f0540fe249883688c78f2ff80, type: 3}
-      propertyPath: gameOver
-      value: 
-      objectReference: {fileID: 494204060}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1096,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   spawnerPlataformas: {fileID: 0}
+  conPunRes: {fileID: 0}
 --- !u!65 &844795332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1505,8 +1530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce62f537549f474d93f06f0e42e93f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1114193584}
-  ui: {fileID: 350032765}
+  rb: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!114 &1114193590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,6 +2393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   spawnerPlataformas: {fileID: 0}
+  conPunRes: {fileID: 2136880383}
 --- !u!65 &1976925625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2630,6 +2656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   spawnerPlataformas: {fileID: 0}
+  conPunRes: {fileID: 0}
 --- !u!65 &2052129472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2957,6 +2984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   spawnerPlataformas: {fileID: 0}
+  conPunRes: {fileID: 1439723950}
 --- !u!65 &2089180509
 BoxCollider:
   m_ObjectHideFlags: 0
