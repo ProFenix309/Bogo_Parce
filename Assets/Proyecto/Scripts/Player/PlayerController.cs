@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,4 +29,5 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Mein Menu");           
         }
     }
+
 }
