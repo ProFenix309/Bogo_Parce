@@ -7,6 +7,11 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] GameObject pause;
     [SerializeField] GameObject gameOver;
 
+    private void Start()
+    {
+        ToggleTime(false);
+    }
+
     public void StarButtonUI()
     {
         SceneManager.LoadScene("InGame");
@@ -15,13 +20,14 @@ public class UI_Manager : MonoBehaviour
     public void PauseMenuON()
     {
         pause.SetActive(true);
-        Time.timeScale = 0f;
+        ToggleTime(false);
+
     }
 
     public void PauseMenuOff()
     {
         pause.SetActive(false);
-        Time.timeScale = 1f;
+        ToggleTime(true);
     }
 
     public void ButtonMeinMenu()
@@ -32,12 +38,24 @@ public class UI_Manager : MonoBehaviour
     public void ResectButton()
     {
         SceneManager.LoadScene("InGame");
-        Time.timeScale = 1f;
+        ToggleTime(true);
     }
 
     public void GameOverPanel(bool pausa)
     {
         gameOver.SetActive(pausa);
-        Time.timeScale = 0f;
+        ToggleTime(false);
+    }
+
+    public void ToggleTime(bool time)
+    {
+        if (time)
+        {
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+        }
     }
 }
