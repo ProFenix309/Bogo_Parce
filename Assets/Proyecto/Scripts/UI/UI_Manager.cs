@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
@@ -15,6 +14,7 @@ public class UI_Manager : MonoBehaviour
     public void PauseMenuON()
     {
         pause.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void PauseMenuOff()
