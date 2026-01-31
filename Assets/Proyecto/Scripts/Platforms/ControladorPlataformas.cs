@@ -4,6 +4,7 @@ public class ControladorPlataformas : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject spawnerPlataformas;
+   
     void Update()
     {
         transform.Translate(1 * -speed * Time.deltaTime , 0, 0);
@@ -14,6 +15,7 @@ public class ControladorPlataformas : MonoBehaviour
         if (other.gameObject.tag == "DetectorPlataformas")
         {
             transform.position = spawnerPlataformas.transform.position;
+            
         }
     }
 }
