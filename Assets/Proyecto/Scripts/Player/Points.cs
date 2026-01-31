@@ -4,7 +4,8 @@ public class Points : MonoBehaviour
 {
     public int SumPuntos = 1;
     public PlayerController player;
-    public GameObject ParticulasDeResiliencia;
+    public GameObject prefabParticulasDeResiliencia;
+    private GameObject instanciaParticulas;
 
 
     private void OnTriggerEnter(Collider other)
@@ -13,8 +14,8 @@ public class Points : MonoBehaviour
         {            
             AdministradorDeJuego.instanciAdm.SumadorPuntos(SumPuntos);
             gameObject.SetActive(false);
-            Instantiate(ParticulasDeResiliencia,gameObject.transform.position, Quaternion.identity);
-            Destroy(ParticulasDeResiliencia, 0.5f);
+            instanciaParticulas = Instantiate(prefabParticulasDeResiliencia,gameObject.transform.position, Quaternion.identity);
+            Destroy(instanciaParticulas, 1);
         }
     }
 }
