@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (ui == null) 
+        if (ui == null)
+        {
             return;
+        } 
+            
         if (collision.gameObject.tag == "FinDelJuego")
         {
             ui.GameOverPanel(true);
