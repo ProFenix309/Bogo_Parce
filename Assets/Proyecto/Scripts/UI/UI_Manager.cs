@@ -8,7 +8,7 @@ public class UI_Manager : MonoBehaviour
 
     public void StarButtonUI()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("InGame");
     }
 
     public void PauseMenuON()
@@ -20,6 +20,7 @@ public class UI_Manager : MonoBehaviour
     public void PauseMenuOff()
     {
         pause.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void ButtonMeinMenu()
@@ -29,6 +30,11 @@ public class UI_Manager : MonoBehaviour
 
     public void ResectButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("InGame");
+    }
+
+    public void Test()
+    {
+        Debug.Log("Hit");
     }
 }
