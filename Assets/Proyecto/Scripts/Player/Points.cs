@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Points : MonoBehaviour
@@ -6,23 +7,19 @@ public class Points : MonoBehaviour
     public PlayerController player;
     public GameObject prefabParticulasDeResiliencia;
     private GameObject instanciaParticulas;
-    public Transform spowner;
+ 
+    
 
-    private void Update()
-    {
-        if(gameObject.transform.position.x ==spowner.transform.position.x)
-        {
-            gameObject.SetActive(true);
-        }
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {            
-            AdministradorDeJuego.instanciAdm.SumadorPuntos(SumPuntos);
-            gameObject.SetActive(false);
+            AdministradorDeJuego.instanciAdm.SumadorPuntos(SumPuntos);            
             instanciaParticulas = Instantiate(prefabParticulasDeResiliencia,gameObject.transform.position, Quaternion.identity);
             Destroy(instanciaParticulas, 1);
+            transform.parent.GetComponent<ControladorPlataformas>().Acativar();
         }
     }
+
 }
