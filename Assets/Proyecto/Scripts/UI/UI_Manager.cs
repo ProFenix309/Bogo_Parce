@@ -9,7 +9,7 @@ public class UI_Manager : MonoBehaviour
 
     public void StarButtonUI()
     {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene("HIstoria");
     }
 
     public void PauseMenuON()

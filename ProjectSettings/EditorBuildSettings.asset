@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Proyecto/Scenes/Mein Menu.unity
     guid: 0a08500fa82b14048a4af9c92697672a
   - enabled: 1
+    path: Assets/Proyecto/Scenes/HIstoria.unity
+    guid: 30ddef5f316d7ec42b0b347c54129669
+  - enabled: 1
     path: Assets/Proyecto/Scenes/InGame.unity
     guid: 9471921d3b220c543b1c856c090bcb29
   m_configObjects:
