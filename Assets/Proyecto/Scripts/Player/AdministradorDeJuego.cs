@@ -18,6 +18,7 @@ public class AdministradorDeJuego : MonoBehaviour
     [SerializeField] GameObject engraneCinco;
     [SerializeField] GameObject enemies;
     [SerializeField] GameObject enemiesDos;
+    
 
     public int Puntos { get => puntos; set => puntos = value; }
 
