@@ -4,11 +4,12 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
-
+    public AudioSource runSource; // Nuevo: fuente de audio dedicada para correr
     public Sprite muteOff, muteOn;
+
+    private bool debeCorrer = false;
 
     private void Awake()
     {
@@ -25,7 +26,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Theme"); 
+        PlayMusic("Theme");
+
+        // Configurar el AudioSource para correr si existe
+        if (runSource != null)
+        {
+            runSource.loop = true;
+        }
     }
 
     public void PlayMusic(string name)
@@ -47,6 +54,40 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // Nuevo: Iniciar sonido de correr en loop
+    public void IniciarCorrer()
+    {
+        if (runSource != null && !runSource.isPlaying)
+        {
+            Sound s = Array.Find(sfxSounds, x => x.name == "Correr");
+            if (s != null)
+            {
+                runSource.clip = s.clip;
+                runSource.Play();
+                debeCorrer = true;
+            }
+        }
+    }
+
+    // Nuevo: Detener sonido de correr
+    public void DetenerCorrer()
+    {
+        if (runSource != null && runSource.isPlaying)
+        {
+            runSource.Stop();
+            debeCorrer = false;
+        }
+    }
+
+    // Nuevo: Reanudar sonido de correr después del salto
+    public void ReanudarCorrer()
+    {
+        if (debeCorrer && runSource != null && !runSource.isPlaying)
+        {
+            runSource.Play();
+        }
+    }
+
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
@@ -55,5 +96,9 @@ public class AudioManager : MonoBehaviour
     public void ToggleSFX()
     {
         sfxSource.mute = !sfxSource.mute;
+        if (runSource != null)
+        {
+            runSource.mute = !runSource.mute;
+        }
     }
 }
