@@ -1970,14 +1970,14 @@ RectTransform:
   m_Children:
   - {fileID: 755610745162348844}
   - {fileID: 1128486911195824222}
+  - {fileID: 2126559463549675251}
+  - {fileID: 79822788585708294}
   - {fileID: 8350326486948374174}
   - {fileID: 3646668290690880661}
   - {fileID: 3457749395174167243}
   - {fileID: 1407487289532879796}
   - {fileID: 284792496491579320}
   - {fileID: 22608264345778760}
-  - {fileID: 2126559463549675251}
-  - {fileID: 79822788585708294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
