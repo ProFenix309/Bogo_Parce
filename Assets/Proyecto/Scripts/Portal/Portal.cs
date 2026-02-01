@@ -6,10 +6,11 @@ public class Portal : MonoBehaviour
     public MeshRenderer mesh;
     public BoxCollider coll;
     public int counter = 0;
+    [SerializeField] GameObject portal;
 
     private void Start()
     {
-        mesh.enabled = false;
+        portal.SetActive(false);
         coll.enabled = false;
     }
     private void Update()
@@ -28,10 +29,10 @@ public class Portal : MonoBehaviour
     IEnumerator SpownPortal()
     {
         yield return new WaitForSeconds(25);
-        mesh.enabled = true;
+        portal.SetActive(true);
         coll.enabled = true;
         yield return new WaitForSeconds(5);
-        mesh.enabled = false;
+        portal.SetActive(false);
         coll.enabled = false;
     }
     public void OnTriggerEnter(Collider other)

@@ -6,9 +6,11 @@ public class PortalDos : MonoBehaviour
     public MeshRenderer mesh;
     public BoxCollider coll;
     public int contador = 0;
+    [SerializeField] GameObject portalDos;
     private void Start()
+
     {
-        mesh.enabled = false;
+        portalDos.SetActive(false);        
         coll.enabled = false;
     }
     private void Update()
@@ -26,10 +28,10 @@ public class PortalDos : MonoBehaviour
     IEnumerator SpownPortalDos()
     {
         yield return new WaitForSeconds(45);
-        mesh.enabled = true;
+        portalDos.SetActive(true);
         coll.enabled = true;
         yield return new WaitForSeconds(5);
-        mesh.enabled = false;
+        portalDos.SetActive(false);
         coll.enabled = false;
 
 
