@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 7500395368887867228}
   - component: {fileID: 3882908171662891219}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Panel Game Over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1625,8 +1625,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19e395ce625e38b48875706447aff7ef, type: 2}
+  m_sharedMaterial: {fileID: 8523965643811271134, guid: 19e395ce625e38b48875706447aff7ef, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2552,6 +2552,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7463479920370655099, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19e395ce625e38b48875706447aff7ef, type: 2}
+    - target: {fileID: 7463479920370655099, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463479920370655099, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8523965643811271134, guid: 19e395ce625e38b48875706447aff7ef, type: 2}
     - target: {fileID: 8577170396536611301, guid: 8f547a1504e262a48afa82c4449c6784, type: 3}
       propertyPath: m_Name
       value: Game Over Panel

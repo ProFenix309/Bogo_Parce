@@ -426,6 +426,7 @@ MonoBehaviour:
   mesh: {fileID: 512786606}
   coll: {fileID: 512786605}
   contador: 0
+  portalDos: {fileID: 0}
 --- !u!65 &512786605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -929,7 +930,7 @@ PrefabInstance:
     - target: {fileID: 7061327856884919249, guid: 5a3a9f7f0540fe249883688c78f2ff80, type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 1485704592}
+      objectReference: {fileID: 1887063341}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1060,9 +1061,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntos: 0
   textoPuntos: {fileID: 1539939207}
+  textoPuntosMenu: {fileID: 0}
   cam: {fileID: 1996695987}
   muro: {fileID: 415344978}
   luz: {fileID: 811477645}
+  engrane: {fileID: 0}
+  engraneUno: {fileID: 0}
+  engraneDos: {fileID: 0}
+  engraneTres: {fileID: 0}
+  engraneCuatro: {fileID: 0}
+  engraneCinco: {fileID: 0}
+  enemies: {fileID: 0}
+  enemiesDos: {fileID: 0}
 --- !u!1 &811477645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,11 +2004,6 @@ MonoBehaviour:
   SumPuntos: 1
   player: {fileID: 1114193589}
   prefabParticulasDeResiliencia: {fileID: 3099201254558095439, guid: 04f419bacc71b5b46ad5b1605805c787, type: 3}
---- !u!1 &1485704592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3604651596148931222, guid: 75085d6e2be7a9a43b66e38e707f32c9, type: 3}
-  m_PrefabInstance: {fileID: 6248477889754054612}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1539939207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1183004060242867294, guid: 75085d6e2be7a9a43b66e38e707f32c9, type: 3}
@@ -2102,6 +2107,7 @@ MonoBehaviour:
   mesh: {fileID: 1758936243}
   coll: {fileID: 1758936246}
   counter: 0
+  portal: {fileID: 0}
 --- !u!23 &1758936243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2191,6 +2197,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1887063341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6572906271703104412, guid: 75085d6e2be7a9a43b66e38e707f32c9, type: 3}
+  m_PrefabInstance: {fileID: 6248477889754054612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976925622
 GameObject:
   m_ObjectHideFlags: 0
