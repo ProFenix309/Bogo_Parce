@@ -13,7 +13,7 @@ public class ControladorSalto : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
