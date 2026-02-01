@@ -6,6 +6,7 @@ public class AdministradorDeJuego : MonoBehaviour
     public static AdministradorDeJuego instanciAdm;
     [SerializeField] private int puntos;
     public TextMeshProUGUI textoPuntos;
+    public TextMeshProUGUI textoPuntosMenu;
     [SerializeField] Camera cam;
     [SerializeField] GameObject muro;
     [SerializeField] GameObject luz;
@@ -15,6 +16,8 @@ public class AdministradorDeJuego : MonoBehaviour
     [SerializeField] GameObject engraneTres;
     [SerializeField] GameObject engraneCuatro;
     [SerializeField] GameObject engraneCinco;
+    [SerializeField] GameObject enemies;
+    [SerializeField] GameObject enemiesDos;
 
     public int Puntos { get => puntos; set => puntos = value; }
 
@@ -33,13 +36,17 @@ public class AdministradorDeJuego : MonoBehaviour
     private void Start()
     {
         puntos = 0;
+        enemiesDos.SetActive(false);
+
     }
 
     public void SumadorPuntos(int sumadorPuntos)
     {
         Puntos += sumadorPuntos;
         textoPuntos.text = Puntos.ToString();
-        
+        textoPuntosMenu.text = Puntos.ToString();
+
+
     }
     public void Portal()
     {
@@ -59,6 +66,9 @@ public class AdministradorDeJuego : MonoBehaviour
         engraneTres.transform.position = new Vector3(6.93f, 8.15f, -4.11f);
         engraneCuatro.transform.position = new Vector3(9.92f, 6.13f, -4.11f);
         engraneCinco.transform.position = new Vector3(12.91f, 4.09f, -4.11f);
+        //Enemies
+        enemies.SetActive(false);
+        enemiesDos.SetActive(true);
 
     }
     public void PortalDos()
@@ -78,6 +88,10 @@ public class AdministradorDeJuego : MonoBehaviour
         engraneTres.transform.position = new Vector3(6.93f, 8.15f, 2.2f);
         engraneCuatro.transform.position = new Vector3(9.92f, 6.13f, 2.2f);
         engraneCinco.transform.position = new Vector3(12.91f, 4.09f, 2.2f);
+        //Enemies
+        enemies.SetActive(true);
+        enemiesDos.SetActive(false);
+
 
     }
 }
