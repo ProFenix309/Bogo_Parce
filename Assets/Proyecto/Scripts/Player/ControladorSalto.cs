@@ -19,12 +19,7 @@ public class ControladorSalto : MonoBehaviour
     private void FixedUpdate()
     {
         estaEnPiso = Physics.CheckBox(detectorDePiso.transform.position, tamañoDetectorPiso, Quaternion.identity, mascaraDePiso);
-        animator.SetBool("IsGround",estaEnPiso);
-        if (estaEnPiso)
-        {
-            AudioManager.Instance.IniciarCorrer();
-        }
- 
+        animator.SetBool("IsGround",estaEnPiso); 
     }
     public void Saltar()
     {
@@ -32,7 +27,7 @@ public class ControladorSalto : MonoBehaviour
         if (estaEnPiso)
         {           
             PlayerController.instance.rb.AddForce(0, fuerzaSalto, 0);
-
+            AudioManager.Instance.PlaySFX("Jump");
         }
     }
 

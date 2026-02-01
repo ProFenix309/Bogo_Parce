@@ -19,6 +19,7 @@ public class Points : MonoBehaviour
             instanciaParticulas = Instantiate(prefabParticulasDeResiliencia,gameObject.transform.position, Quaternion.identity);
             Destroy(instanciaParticulas, 1);
             transform.parent.GetComponent<ControladorPlataformas>().Acativar();
+            AudioManager.Instance.PlaySFX("Point");
         }
     }
 
