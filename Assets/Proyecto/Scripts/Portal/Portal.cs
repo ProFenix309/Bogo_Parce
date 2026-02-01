@@ -34,6 +34,8 @@ public class Portal : MonoBehaviour
         yield return new WaitForSeconds(5);
         portal.SetActive(false);
         coll.enabled = false;
+        yield return new WaitForSeconds(50);
+        counter = 0;
     }
     public void OnTriggerEnter(Collider other)
     {

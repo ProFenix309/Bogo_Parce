@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class PortalDos : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class PortalDos : MonoBehaviour
         yield return new WaitForSeconds(5);
         portalDos.SetActive(false);
         coll.enabled = false;
+        yield return new WaitForSeconds(50);
+        contador = 0;
 
 
     }
