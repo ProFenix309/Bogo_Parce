@@ -7,10 +7,18 @@ public class ControladorSalto : MonoBehaviour
     [SerializeField] GameObject detectorDePiso;
     [SerializeField] Vector3 tamañoDetectorPiso;    
     [SerializeField] LayerMask mascaraDePiso;
+    [SerializeField] Animator animator;
+
+
+    private void Start()
+    {
+        animator.GetComponent<Animator>();
+    }
 
     private void FixedUpdate()
     {
-        estaEnPiso = Physics.CheckBox(detectorDePiso.transform.position, tamañoDetectorPiso, Quaternion.identity, mascaraDePiso);     
+        estaEnPiso = Physics.CheckBox(detectorDePiso.transform.position, tamañoDetectorPiso, Quaternion.identity, mascaraDePiso);
+        animator.SetBool("IsGround",estaEnPiso);
     }
     public void Saltar()
     {
